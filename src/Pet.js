@@ -1,12 +1,20 @@
 import React from "react";
 
-const Pet = (props) => {
+const Pet = ({ id, name, animal, breed, media, location }) => {
+  const thumbnail = !media.length
+    ? "http://placecorgi.com/300/300"
+    : media[0].small;
+
   return (
-    <div>
-      <h1>{props.name}</h1>
-      <h2>{props.animal}</h2>
-      <h2>{props.breed}</h2>
-    </div>
+    <a href={`details/${id}`} className="pet">
+      <div className="image-container">
+        <img src={thumbnail} alt={name} />
+      </div>
+      <div className="info">
+        <h1>{name}</h1>
+        <h2>{`${animal} - ${breed} - ${location}`}</h2>
+      </div>
+    </a>
   );
 };
 

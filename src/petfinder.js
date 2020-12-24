@@ -1,4 +1,5 @@
 import { Client } from "@petfinder/petfinder-js";
+import "regenerator-runtime/runtime.js";
 
 const client = new Client({
   apiKey: "Kf0JwJq5NNApC5FghXZVWboMHTqMkHHz3qpf6bRr97uKs227Dq",
@@ -17,6 +18,7 @@ const ANIMALS = [
 ];
 
 const getBreeds = (animal) => client.animalData.breeds(animal);
-const getSearchResults = (type, breed) => client.animal.search({ type, breed });
+const getSearchResults = (animal, breed, location) =>
+  client.animal.search({ type: animal, breed, location });
 
 export { ANIMALS, getBreeds, getSearchResults };
