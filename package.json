@@ -1,0 +1,26 @@
+{
+  "name": "adopt-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wahabshaikh/adopt-me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wahabshaikh/adopt-me/issues"
+  },
+  "homepage": "https://github.com/wahabshaikh/adopt-me#readme",
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "prettier": "^2.2.1"
+  }
+}
