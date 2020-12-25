@@ -1,11 +1,18 @@
 import React from "react";
+import Details from "./Details";
 import SearchContainer from "./SearchContainer";
+import { Link, Router } from "@reach/router";
 
 const App = () => {
   return (
     <div>
-      <h1>Adopt Me!</h1>
-      <SearchContainer />
+      <header>
+        <Link to="/">Adopt Me!</Link>
+      </header>
+      <Router>
+        <SearchContainer path="/" />
+        <Details path="/details/:id" />
+      </Router>
     </div>
   );
 };
