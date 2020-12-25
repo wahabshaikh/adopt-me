@@ -1,4 +1,5 @@
 import { Client } from "@petfinder/petfinder-js";
+import "regenerator-runtime/runtime.js";
 
 const client = new Client({
   apiKey: "Kf0JwJq5NNApC5FghXZVWboMHTqMkHHz3qpf6bRr97uKs227Dq",
